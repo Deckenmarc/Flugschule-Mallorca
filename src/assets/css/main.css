@@ -156,8 +156,8 @@
     }
     
     .hero-content {
-        @apply relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center flex items-center justify-center min-h-screen;
-    }
+    @apply relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 mt-20 md:mt-24 text-center flex items-center justify-center min-h-screen;
+}
     
     /* Modern text gradient */
     .text-gradient {
