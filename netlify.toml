@@ -61,6 +61,33 @@
 # Form handling configuration
 [forms]
   # Enable Netlify Forms for lead generation
+
+# Form notifications
+[[forms]]
+  name = "contact"
+  action = "/thank-you"
+  
+  [forms.settings]
+    # Send notification emails to company
+    to = "contact@flightservice365.com"
+    subject = "Neue Kontaktanfrage - Flugschule Mallorca"
+    
+    # Custom email template
+    template = """
+    Neue Kontaktanfrage von der Website:
+    
+    Name: {{ name }}
+    E-Mail: {{ email }}
+    Telefon: {{ phone }}
+    Interesse: {{ course }}
+    
+    Nachricht:
+    {{ message }}
+    
+    Datenschutz zugestimmt: {{ privacy }}
+    
+    Gesendet am: {{ sent_at }}
+    """
   
 # Functions configuration for enhanced form processing
 [functions]

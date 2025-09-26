@@ -924,11 +924,13 @@ function initContactForm() {
     
     // Add form validation on submit
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Don't prevent default - let Netlify handle the submission
+        // e.preventDefault();
         
         // Validate all fields before submission
         const isFormValid = validateForm(this);
         if (!isFormValid) {
+            e.preventDefault();
             // Scroll to first error field
             const firstError = this.querySelector('.error');
             if (firstError) {
@@ -937,8 +939,6 @@ function initContactForm() {
             return;
         }
         
-        // Get form data
-        const formData = new FormData(this);
         const submitButton = this.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.innerHTML;
         
@@ -952,10 +952,8 @@ function initContactForm() {
             Wird gesendet...
         `;
         
-        // Simulate form submission (replace with actual form handling service like Netlify Forms)
-        setTimeout(() => {
-            handleFormSuccess(contactForm, submitButton, originalButtonText);
-        }, 2000);
+        // Let Netlify handle the form submission
+        // The form will redirect to a thank you page or show success message
     });
     
     // Real-time form validation
