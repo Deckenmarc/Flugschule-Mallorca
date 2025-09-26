@@ -516,21 +516,21 @@ function initNavigationActiveState() {
  * Initialize smooth scrolling for anchor links
  */
 function initSmoothScrolling() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinks = document.querySelectorAll('a[href^="#"], .scroll-to-contact');
     
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
+            e.preventDefault();
+            
+            const href = this.getAttribute('href') || '#contact';
             
             // Skip if it's just "#" or empty
             if (!href || href === '#') return;
             
-            const targetId = href.substring(1);
+            const targetId = href === '#contact' ? 'contact' : href.substring(1);
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                e.preventDefault();
-                
                 // Calculate offset for sticky header
                 const header = document.querySelector('header') || document.querySelector('.nav-header') || document.querySelector('nav');
                 const headerHeight = header ? header.offsetHeight : 80;
@@ -924,13 +924,11 @@ function initContactForm() {
     
     // Add form validation on submit
     contactForm.addEventListener('submit', function(e) {
-        // Don't prevent default - let Netlify handle the submission
-        // e.preventDefault();
+        e.preventDefault();
         
         // Validate all fields before submission
         const isFormValid = validateForm(this);
         if (!isFormValid) {
-            e.preventDefault();
             // Scroll to first error field
             const firstError = this.querySelector('.error');
             if (firstError) {
@@ -939,6 +937,8 @@ function initContactForm() {
             return;
         }
         
+        // Get form data
+        const formData = new FormData(this);
         const submitButton = this.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.innerHTML;
         
@@ -952,8 +952,10 @@ function initContactForm() {
             Wird gesendet...
         `;
         
-        // Let Netlify handle the form submission
-        // The form will redirect to a thank you page or show success message
+        // Simulate form submission (replace with actual form handling service like Netlify Forms)
+        setTimeout(() => {
+            handleFormSuccess(contactForm, submitButton, originalButtonText);
+        }, 2000);
     });
     
     // Real-time form validation
