@@ -1,0 +1,614 @@
+/* Main CSS file for Flugschule Mallorca */
+@import './critical.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom aviation-themed styles */
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    
+    body {
+        @apply font-sans text-aviation-gray-900 leading-relaxed bg-white antialiased;
+    }
+    
+    /* Typography base styles */
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading font-bold text-aviation-gray-900;
+    }
+    
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+    }
+    
+    h2 {
+        @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+    }
+    
+    h3 {
+        @apply text-2xl md:text-3xl lg:text-4xl leading-tight;
+    }
+    
+    h4 {
+        @apply text-xl md:text-2xl lg:text-3xl leading-tight;
+    }
+    
+    h5 {
+        @apply text-lg md:text-xl lg:text-2xl leading-tight;
+    }
+    
+    h6 {
+        @apply text-base md:text-lg lg:text-xl leading-tight;
+    }
+    
+    p {
+        @apply text-base md:text-lg leading-relaxed text-aviation-gray-700;
+    }
+    
+    a {
+        @apply text-aviation-blue-600 hover:text-aviation-blue-700 transition-colors duration-200;
+    }
+}
+
+@layer components {
+    /* Button Components */
+    .btn {
+        @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    }
+    
+    .btn-primary {
+        @apply btn bg-aviation-blue-600 hover:bg-aviation-blue-700 text-white py-3 px-6 focus:ring-aviation-blue-500 shadow-aviation hover:shadow-aviation-lg;
+    }
+    
+    .btn-secondary {
+        @apply btn bg-aviation-gold-500 hover:bg-aviation-gold-600 text-white py-3 px-6 focus:ring-aviation-gold-500 shadow-aviation hover:shadow-aviation-lg;
+    }
+    
+    .btn-outline {
+        @apply btn border-2 border-aviation-blue-600 text-aviation-blue-600 hover:bg-aviation-blue-600 hover:text-white py-3 px-6 focus:ring-aviation-blue-500;
+    }
+    
+    .btn-lg {
+        @apply py-4 px-8 text-lg;
+    }
+    
+    .btn-sm {
+        @apply py-2 px-4 text-sm;
+    }
+    
+    /* Modern Navigation Components */
+    .nav-link-modern {
+        @apply text-aviation-gray-700 hover:text-aviation-blue-600 font-medium transition-all duration-200 relative px-3 py-2 rounded-lg hover:bg-aviation-gray-50;
+    }
+    
+    .nav-link-modern.active {
+        @apply text-aviation-blue-600 bg-aviation-blue-50;
+    }
+    
+    .nav-link-modern.active::after {
+        @apply content-[''] absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-aviation-blue-600 rounded-full;
+    }
+    
+    .btn-modern-primary {
+        @apply inline-flex items-center px-4 py-2 bg-aviation-blue-600 hover:bg-aviation-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105;
+    }
+    
+    .btn-modern-primary:hover {
+        @apply shadow-aviation-blue-500/25;
+    }
+    
+    /* Grid System Components */
+    .grid-container {
+        @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    }
+    
+    .grid-section {
+        @apply py-12 md:py-16 lg:py-20;
+    }
+    
+    .grid-2 {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8;
+    }
+    
+    .grid-3 {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+    }
+    
+    .grid-4 {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8;
+    }
+    
+    /* Card Components */
+    .card {
+        @apply bg-white rounded-lg shadow-aviation hover:shadow-aviation-lg transition-shadow duration-200 overflow-hidden;
+    }
+    
+    .card-header {
+        @apply p-6 pb-4;
+    }
+    
+    .card-body {
+        @apply p-6 pt-0;
+    }
+    
+    .card-footer {
+        @apply p-6 pt-4 border-t border-aviation-gray-100;
+    }
+    
+    /* Modern Hero Section */
+    .hero-section {
+        @apply relative bg-gradient-to-br from-aviation-blue-900 via-aviation-blue-800 to-aviation-blue-700 text-white overflow-hidden;
+        min-height: 100vh;
+    }
+    
+    .hero-background {
+        @apply absolute inset-0;
+        background-image: url('/assets/images/hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-overlay {
+        @apply absolute inset-0 bg-gradient-to-br from-aviation-blue-900/80 via-aviation-blue-800/70 to-transparent;
+    }
+    
+    .hero-content {
+        @apply relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center flex items-center justify-center min-h-screen;
+    }
+    
+    /* Modern text gradient */
+    .text-gradient {
+        @apply bg-gradient-to-r from-aviation-gold-400 to-aviation-gold-300 bg-clip-text text-transparent;
+    }
+    
+    /* Modern Hero animations */
+    .hero-section h1 {
+        animation: heroFadeIn 1.2s ease-out 0.3s both;
+    }
+    
+    .hero-section h2:nth-of-type(1) {
+        animation: heroSlideUp 1s ease-out 0.6s both;
+    }
+    
+    .hero-section h2:nth-of-type(2) {
+        animation: heroSlideUp 1s ease-out 0.8s both;
+    }
+    
+    .hero-section h2:nth-of-type(3) {
+        animation: heroSlideUp 1s ease-out 1s both;
+    }
+    
+    .hero-section .group {
+        animation: heroSlideUp 1s ease-out 1.2s both;
+    }
+    
+    .hero-section .stats-grid {
+        animation: heroSlideUp 1s ease-out 1.4s both;
+    }
+    
+    /* Modern keyframes */
+    @keyframes heroFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    @keyframes heroSlideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Floating animation for background elements */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-float-delayed {
+        animation: float 6s ease-in-out infinite 3s;
+    }
+    
+    /* Statistics Section */
+    .stats-grid {
+        @apply grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8;
+    }
+    
+    .stat-item {
+        @apply text-center p-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300;
+    }
+    
+    .stat-number {
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold text-aviation-gold-400 mb-2 block;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .stat-label {
+        @apply text-xs md:text-sm font-semibold text-white uppercase tracking-wider;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .stat-icon {
+        @apply flex justify-center items-center;
+    }
+    
+    .stat-icon svg {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover .stat-icon svg {
+        transform: scale(1.1);
+    }
+    
+    /* Section Headers */
+    .section-header {
+        @apply text-center mb-12 md:mb-16;
+    }
+    
+    .section-title {
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold text-aviation-gray-900 mb-4;
+    }
+    
+    .section-subtitle {
+        @apply text-lg md:text-xl text-aviation-gray-600 max-w-3xl mx-auto;
+    }
+    
+    /* Form Components */
+    .form-group {
+        @apply mb-6;
+    }
+    
+    .form-label {
+        @apply block text-sm font-medium text-aviation-gray-700 mb-2;
+    }
+    
+    .form-input {
+        @apply w-full px-4 py-3 border border-aviation-gray-300 rounded-lg focus:ring-2 focus:ring-aviation-blue-500 focus:border-aviation-blue-500 transition-colors duration-200;
+    }
+    
+    .form-textarea {
+        @apply form-input resize-y min-h-[120px];
+    }
+    
+    .form-select {
+        @apply form-input appearance-none bg-white;
+    }
+    
+    .form-input.error {
+        @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+    }
+    
+    .error-message {
+        @apply text-red-600 text-sm mt-1;
+    }
+    
+    /* Utility Classes */
+    .text-gradient {
+        @apply bg-gradient-to-r from-aviation-blue-600 to-aviation-gold-500 bg-clip-text text-transparent;
+    }
+    
+    .bg-gradient-aviation {
+        @apply bg-gradient-to-br from-aviation-blue-600 to-aviation-blue-800;
+    }
+    
+    .bg-gradient-gold {
+        @apply bg-gradient-to-br from-aviation-gold-400 to-aviation-gold-600;
+    }
+    
+    /* Animation Classes */
+    .animate-on-scroll {
+        @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    }
+    
+    .animate-on-scroll.visible {
+        @apply opacity-100 translate-y-0;
+    }
+    
+    /* Image Optimization */
+    img {
+        @apply max-w-full h-auto;
+    }
+    
+    .img-cover {
+        @apply object-cover w-full h-full;
+    }
+    
+    .img-contain {
+        @apply object-contain w-full h-full;
+    }
+    
+    /* Loading States */
+    .loading-skeleton {
+        @apply bg-gradient-to-r from-aviation-gray-200 via-aviation-gray-100 to-aviation-gray-200 animate-pulse;
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    
+    /* Modern card hover effects */
+    .card-modern {
+        @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden;
+    }
+    
+    .card-modern:hover {
+        @apply -translate-y-2;
+    }
+    
+    /* Modern gradient backgrounds */
+    .bg-gradient-modern {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .bg-gradient-gold-modern {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    /* Modern button styles */
+    .btn-modern {
+        @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 transform hover:scale-105;
+    }
+    
+    .btn-modern-lg {
+        @apply px-8 py-4 text-lg;
+    }
+    
+    /* Modern text effects */
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Modern spacing utilities */
+    .space-y-modern > * + * {
+        @apply mt-8;
+    }
+    
+    /* Modern backdrop blur */
+    .backdrop-blur-modern {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    /* Responsive Utilities */
+    .container-fluid {
+        @apply w-full px-4 sm:px-6 lg:px-8;
+    }
+    
+    .aspect-video {
+        @apply aspect-w-16 aspect-h-9;
+    }
+    
+    .aspect-square {
+        @apply aspect-w-1 aspect-h-1;
+    }
+    
+    /* Form Components */
+    .form-group {
+        @apply mb-6;
+    }
+    
+    .form-label {
+        @apply block text-sm font-semibold text-aviation-gray-700 mb-2;
+    }
+    
+    .form-input {
+        @apply w-full px-4 py-3 border border-aviation-gray-300 rounded-lg focus:ring-2 focus:ring-aviation-blue-500 focus:border-aviation-blue-500 transition-colors duration-200 bg-white text-aviation-gray-900 placeholder-aviation-gray-500;
+    }
+    
+    .form-input:focus {
+        @apply outline-none;
+    }
+    
+    .form-input.error {
+        @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+    }
+    
+    .form-select {
+        @apply w-full px-4 py-3 border border-aviation-gray-300 rounded-lg focus:ring-2 focus:ring-aviation-blue-500 focus:border-aviation-blue-500 transition-colors duration-200 bg-white text-aviation-gray-900 cursor-pointer;
+    }
+    
+    .form-select:focus {
+        @apply outline-none;
+    }
+    
+    .form-textarea {
+        @apply w-full px-4 py-3 border border-aviation-gray-300 rounded-lg focus:ring-2 focus:ring-aviation-blue-500 focus:border-aviation-blue-500 transition-colors duration-200 bg-white text-aviation-gray-900 placeholder-aviation-gray-500 resize-y min-h-[120px];
+    }
+    
+    .form-textarea:focus {
+        @apply outline-none;
+    }
+    
+    .form-textarea.error {
+        @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+    }
+    
+    .error-message {
+        @apply text-red-600 text-sm mt-1 flex items-center;
+    }
+    
+    .error-message::before {
+        content: "⚠";
+        @apply mr-1;
+    }
+    
+    /* Form validation states */
+    .form-input:valid:not(:placeholder-shown) {
+        @apply border-green-500;
+    }
+    
+    .form-textarea:valid:not(:placeholder-shown) {
+        @apply border-green-500;
+    }
+    
+    /* GDPR Checkbox styling */
+    input[type="checkbox"] {
+        @apply w-4 h-4 text-aviation-blue-600 bg-white border-aviation-gray-300 rounded focus:ring-aviation-blue-500 focus:ring-2;
+    }
+    
+    input[type="checkbox"]:checked {
+        @apply bg-aviation-blue-600 border-aviation-blue-600;
+    }
+}    /* Enha
+nced Interactive Elements */
+    .loading {
+        cursor: wait;
+    }
+    
+    .loaded {
+        cursor: default;
+    }
+    
+    /* Scroll to top button animations */
+    #scroll-to-top {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    #scroll-to-top:hover {
+        transform: translateY(-2px) scale(1.05);
+    }
+    
+    #scroll-to-top:active {
+        transform: translateY(0) scale(0.95);
+    }
+    
+    /* Enhanced card hover effects */
+    .card:hover,
+    .card-modern:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Button ripple effect container */
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline,
+    button {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Enhanced focus states for accessibility */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: 2px solid #3B82F6;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+    
+    /* Mobile menu enhanced animations */
+    #mobile-menu {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    /* Statistics counter enhanced animations */
+    .stat-number {
+        transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover .stat-number {
+        transform: scale(1.1);
+    }
+    
+    /* Image loading states */
+    img.loading-skeleton {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+    
+    img.loaded {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Enhanced form animations */
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    }
+    
+    /* Course registration button enhancements */
+    [data-course] {
+        transition: all 0.3s ease;
+    }
+    
+    [data-course]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    [data-course]:active {
+        transform: translateY(0);
+    }
+    
+    /* Enhanced scroll animations */
+    .animate-on-scroll {
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                   transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Performance optimizations */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        
+        .animate-on-scroll {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }

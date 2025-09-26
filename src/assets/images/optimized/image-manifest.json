@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "original": "hero-background.jpg",
+    "webp": "webp/hero-background.webp",
+    "sizes": [
+      "320w",
+      "768w",
+      "1024w",
+      "1920w"
+    ]
+  },
+  "aircraft": {
+    "cessna-t303": {
+      "original": "cessna-t303.jpg",
+      "webp": "webp/cessna-t303.webp"
+    },
+    "socata-tb20": {
+      "original": "socata-tb20.jpg",
+      "webp": "webp/socata-tb20.webp"
+    },
+    "piper-arrow": {
+      "original": "piper-arrow.jpg",
+      "webp": "webp/piper-arrow.webp"
+    },
+    "piper-turbo": {
+      "original": "piper-turbo.jpg",
+      "webp": "webp/piper-turbo.webp"
+    }
+  },
+  "team": {
+    "team-1": {
+      "original": "team-1-min.jpg",
+      "webp": "webp/team-1-min.webp"
+    },
+    "team-2": {
+      "original": "team-2-min.jpg",
+      "webp": "webp/team-2-min.webp"
+    },
+    "team-3": {
+      "original": "team-3-min.jpg",
+      "webp": "webp/team-3-min.webp"
+    }
+  }
+}

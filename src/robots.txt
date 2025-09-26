@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://flugschule-mallorca.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all search engines to access images
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Allow all search engines to access CSS and JS for better rendering
+User-agent: *
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Disallow any admin or private directories (if they exist in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.well-known/
+
+# Allow specific pages for better SEO
+Allow: /
+Allow: /flugschule/
+Allow: /charter/
+Allow: /flotte/
+
+# Additional directives for better SEO
+# Allow access to important files
+Allow: /sitemap.xml
+Allow: /robots.txt

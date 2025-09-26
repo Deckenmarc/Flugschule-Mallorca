@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://flugschule-mallorca.com/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/hero-background.jpg</image:loc>
+      <image:title>Flugschule Mallorca - Professionelle Flugausbildung</image:title>
+      <image:caption>Flugschule Mallorca bietet professionelle PPL-365 Ausbildung und Flugzeug Charter Services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/aircrew-hero.jpg</image:loc>
+      <image:title>Erfahrene Fluglehrer und Crew</image:title>
+      <image:caption>Unser erfahrenes Team von Fluglehrern und Luftfahrtexperten</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Flight Training Page -->
+  <url>
+    <loc>https://flugschule-mallorca.com/flugschule/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/cockpit.jpg</image:loc>
+      <image:title>PPL-365 Flugausbildung Cockpit</image:title>
+      <image:caption>Moderne Cockpit-Ausbildung für PPL-365 Privatpilotenlizenz</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Charter Services Page -->
+  <url>
+    <loc>https://flugschule-mallorca.com/charter/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/aircraft-exterior.jpg</image:loc>
+      <image:title>Flugzeug Charter Services</image:title>
+      <image:caption>Professionelle Flugzeug Charter Services mit moderner Flotte</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Fleet Page -->
+  <url>
+    <loc>https://flugschule-mallorca.com/flotte/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/cessna-t303.jpg</image:loc>
+      <image:title>Cessna T303 Crusader</image:title>
+      <image:caption>Cessna T303 Crusader - Zweimotoriges Reise- und Geschäftsflugzeug</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/socata-tb20.jpg</image:loc>
+      <image:title>Socata TB20 Trinidad</image:title>
+      <image:caption>Socata TB20 Trinidad - Einmotoriges Kurzstrecken- und Ausflugsflugzeug</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/piper-turbo.jpg</image:loc>
+      <image:title>Piper Turbo Arrow IV</image:title>
+      <image:caption>Piper Turbo Arrow IV - Einmotoriges Reiseflugzeug</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://flugschule-mallorca.com/assets/images/piper-arrow.jpg</image:loc>
+      <image:title>Piper Arrow IV</image:title>
+      <image:caption>Piper Arrow IV non Turbo - Einmotoriges Reiseflugzeug</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>
