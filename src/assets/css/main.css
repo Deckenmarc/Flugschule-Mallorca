@@ -140,7 +140,7 @@
     /* Modern Hero Section */
     .hero-section {
         @apply relative bg-gradient-to-br from-aviation-blue-900 via-aviation-blue-800 to-aviation-blue-700 text-white overflow-hidden;
-        min-height: 100vh;
+        min-height: 80vh;
     }
     
     .hero-background {
@@ -156,7 +156,7 @@
     }
     
     .hero-content {
-    @apply relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 mt-20 md:mt-48 text-center flex items-center justify-center min-h-screen margin-top: 40rem;
+    @apply relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 mt-20 md:mt-48 text-center flex items-center justify-center min-h-screen ;
 }
     
     /* Modern text gradient */
